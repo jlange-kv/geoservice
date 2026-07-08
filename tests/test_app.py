@@ -2,6 +2,8 @@
 under the new package structure (import geoservice, not this flat module) — not
 to rewrite them."""
 
+from http import HTTPStatus
+
 from fastapi.testclient import TestClient
 
 from geoservice.app import app
@@ -17,11 +19,11 @@ def test_buffer_returns_a_polygon():
             "distance": 1,
         },
     )
-    assert resp.status_code == 200
+    assert resp.status_code == HTTPStatus.OK
     assert resp.json()["type"] == "Polygon"
 
 
 def test_health_responds():
     resp = client.get("/health")
-    assert resp.status_code == 200
+    assert resp.status_code == HTTPStatus.OK
     assert resp.json() == {"status": "ok"}

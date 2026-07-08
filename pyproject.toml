@@ -8,8 +8,12 @@ dependencies = [
     "fastapi",
     "uvicorn",
     "shapely",
+]
+
+[dependency-groups]
+dev = [
     "pytest",
-    "httpx",
+    "httpx2",
 ]
 
 [build-system]
