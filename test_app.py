@@ -4,7 +4,7 @@ to rewrite them."""
 
 from fastapi.testclient import TestClient
 
-from app import app
+from geoservice.app import app
 
 client = TestClient(app)
 
@@ -12,8 +12,10 @@ client = TestClient(app)
 def test_buffer_returns_a_polygon():
     resp = client.post(
         "/buffer",
-        json={"geometry": {"type": "Point", "coordinates": [10.75, 59.91]},
-              "distance": 1},
+        json={
+            "geometry": {"type": "Point", "coordinates": [10.75, 59.91]},
+            "distance": 1,
+        },
     )
     assert resp.status_code == 200
     assert resp.json()["type"] == "Polygon"

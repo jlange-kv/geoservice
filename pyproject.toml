@@ -1,5 +1,5 @@
 [project]
-name = "provided"
+name = "geoservice"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -11,3 +11,7 @@ dependencies = [
     "pytest",
     "httpx",
 ]
+
+[build-system]
+requires = ["uv_build>=0.11.28,<0.12"]
+build-backend = "uv_build"
