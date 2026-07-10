@@ -1,5 +1,4 @@
-"""Tiny geo service. Everything is in this one file on purpose — that's the mess
-you're cleaning up. Do NOT rewrite the logic; move it into a real package."""
+"""Tiny geo service that buffers a geometry."""
 
 from fastapi import FastAPI
 
