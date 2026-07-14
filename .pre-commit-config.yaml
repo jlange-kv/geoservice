@@ -1,0 +1,14 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: "v0.15.21"
+    hooks:
+      - id: ruff-check
+      - id: ruff-format
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: "v6.0.0"
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml              # your own config file is YAML — it checks itself
+      - id: check-merge-conflict    # catches committed `<<<<<<<` markers
+      - id: check-added-large-files # the 200 MB shapefile you did not mean to add

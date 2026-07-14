@@ -15,6 +15,7 @@ dev = [
     "pytest",
     "httpx2",
     "ruff>=0.15.21",
+    "pre-commit>=4.6.0",
 ]
 
 [tool.ruff]
