@@ -8,3 +8,6 @@ uv sync
 uv run uvicorn geoservice.app:app --port 8000
 uv run pytest
 ```
+
+The repo uses `pre-commit` for *pre-commit* hooks. Install
+hooks using `uv run pre-commit install`.

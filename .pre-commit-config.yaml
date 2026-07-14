@@ -12,3 +12,8 @@ repos:
       - id: check-yaml              # your own config file is YAML — it checks itself
       - id: check-merge-conflict    # catches committed `<<<<<<<` markers
       - id: check-added-large-files # the 200 MB shapefile you did not mean to add
+
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: "v8.30.0"
+    hooks:
+      - id: gitleaks
