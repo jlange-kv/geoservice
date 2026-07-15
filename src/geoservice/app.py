@@ -1,7 +1,5 @@
 """Tiny geo service that buffers a geometry."""
 
-import random
-
 from fastapi import FastAPI
 
 from geoservice.geometry import buffer_geometry
@@ -19,5 +17,3 @@ def buffer(req: BufferRequest) -> dict:
 @app.get("/health")
 def health() -> dict:
     return {"status": "ok"}
-
-a=[1,2]
