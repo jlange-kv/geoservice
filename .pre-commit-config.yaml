@@ -1,9 +1,21 @@
+default_install_hook_types: [pre-commit]
+
 repos:
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: "v0.15.21"
+  - repo: local # ruff runs from the project venv, not from a pre-commit-managed copy
     hooks:
       - id: ruff-check
+        name: ruff check (project venv)
+        entry: uv run --frozen ruff check --force-exclude
+        language: system
+        types_or: [python, pyi]
+        require_serial: true
       - id: ruff-format
+        name: ruff format (project venv)
+        entry: uv run --frozen ruff format --force-exclude
+        language: system
+        types_or: [python, pyi]
+        require_serial: true
+
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: "v6.0.0"
     hooks:
