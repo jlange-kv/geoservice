@@ -11,3 +11,5 @@ uv run pytest
 
 The repo uses `pre-commit` for *pre-commit* hooks. Install
 hooks using `uv run pre-commit install`.
+
+a trivial commit
