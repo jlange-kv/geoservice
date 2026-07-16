@@ -20,8 +20,8 @@ def health() -> dict:
 
 
 # Format error
-a = [1,2]
+a = [1, 2]
 
 # Lint error
-if 1==True:
+if 1 == True:
     print("Hello")
