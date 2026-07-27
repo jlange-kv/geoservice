@@ -20,6 +20,8 @@ RUN uv sync --frozen --no-dev --no-editable
 # ---- runtime: no uv, no build tools, non-root ----
 FROM python:3.11-slim-bookworm@sha256:b18992999dbe963a45a8a4da40ac2b1975be1a776d939d098c647482bcad5cba AS runtime
 
+RUN pip uninstall --yes setuptools wheel pip
+
 RUN useradd --create-home --uid 1000 geoservice
 USER geoservice
 WORKDIR /app
