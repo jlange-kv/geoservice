@@ -1,0 +1,11 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions      # bumps your SHA-pinned uses: (and the # vN comment)
+    directory: /
+    schedule: { interval: weekly }
+  - package-ecosystem: docker               # bumps the base-image digest in your Dockerfile
+    directory: /
+    schedule: { interval: weekly }
+  - package-ecosystem: uv                  # your Python deps
+    directory: /
+    schedule: { interval: weekly }
