@@ -80,7 +80,7 @@ jobs:
           severity: 'CRITICAL,HIGH'
 
   publish:
-    needs: [lint, test, image]
+    needs: [lint, test, image, secrets, audit]
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     permissions:
